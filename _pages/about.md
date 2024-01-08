@@ -8,7 +8,7 @@ subtitle: |+
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: MashalovNE.png
   image_circular: false # crops the image to make it circular
 
 news: true  # includes a list of news items
@@ -21,4 +21,4 @@ Write your biography here. Tell the world about yourself. Link to your favorite 
 
 **Research:** My goal is to build powerful AI models capable with use fundamental physics law.
 
-**Previously:** I received my Bachaleor in MIPT.
+**Previously:** I received my Bachelor in MIPT.
