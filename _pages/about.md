@@ -21,4 +21,4 @@ social: true  # includes social icons at the bottom of the page
 
 **Previously:** I received my Bachelor in MIPT.
 
-**Hobies**: In my free time I like to practice Jiu Jitusu🥋 and play acoustic guitar. 
+**Hobies**: In my free time I like to practice Jiu Jitusu 🥋 and play acoustic guitar. 

@@ -9,4 +9,8 @@ Types:
 
 
 
+Skeletonize
+
+
+
 https://github.com/ermongroup/SDEdit
