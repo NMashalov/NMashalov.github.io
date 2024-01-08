@@ -1,14 +1,15 @@
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D. in Computer Science
-      institution: Stanford University, California, United States
-      year: 2022
+    - title: Master in Mathematics and Physics
+      institution: Moscow Physics University, Moscow, Russia
+      year: 2024
       description:
-        - Advised by <a href="https://cs.stanford.edu/~ermon">Stefano Ermon</a>.
+        - Active participance 
+        - Advised by Yashenko Ivan
     - title: Bachelor in Mathematics and Physics
       institution: Moscow Physics University, Moscow, Russia
-      year: 2018
+      year: 2022
       description:
         - <em> Top 1% rating </em>
         - GPA 4.98
@@ -34,18 +35,28 @@
   contents:
     - year: 2023
       items:
-        - Sirius workshop
+        - Attendance to Sirius annual workshop on Government Artificial Intelligence
+    - year: 2020
+      items:
+        - Abramov Scholarship
 
 
 - title: Teaching
   type: time_table
   contents:
-
     - title: Teaching Assistant
       institution: Python Course
       year: Fall 2023
+    - title: Teaching Assistant
+      institution: Physics olympiad club
+      year: Fall 2022
 
 - title: Professional Services
   type: list
-  contents:    
-    - Paper review MIPT
+  contents:   
+    - year: 2023
+      items:
+        - Paper review MIPT
+    - year: 2020
+      items:
+        - IKI RAS Annual Conference
