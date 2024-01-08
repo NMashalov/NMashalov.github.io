@@ -28,7 +28,7 @@ Most crucial equation comes. It's defined through density estimation
 Awesome overview of NERF are presented in [AI SUMMER](https://theaisummer.com/nerf/)
 
 
-| ![NERF.jpg](assets/img/three_d_dmodels/neural_field.png) | 
+| ![NERF.jpg](/assets/img/posts/three_d_dmodels/neural_field.png) | 
 |:--:| 
 | *NERF* |
 
