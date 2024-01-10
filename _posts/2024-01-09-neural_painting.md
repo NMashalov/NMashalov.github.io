@@ -1,12 +1,11 @@
 ---
 layout: post
-title: 3dModels
+title: Neural Painting
 ---
 
 Types:
 - inpainting
-- strokes
-
+- stroke-based
 
 ## Style2Paints
 
