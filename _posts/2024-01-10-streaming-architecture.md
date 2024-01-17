@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Streaming architecture
+hidden: True
 ---
 
 Streaming application also known as near real time (NRT) are . They are widely used in credit scoring, geoanalytics and mobile.
@@ -46,7 +47,7 @@ Teach realisation:
 
 ## Architecture judgement
 
-Arhitecture brings useful decomposition
+Arhitecture brings useful decomposition.
 
 
 ## Feature level

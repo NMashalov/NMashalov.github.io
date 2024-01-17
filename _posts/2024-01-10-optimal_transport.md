@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Airflow automatization
+title: Practical applications of optimal transport
+description: Optimal transport, also known as Monge-Kantorovich transport or Wasserstein distance, is a mathematical framework that deals with the optimal way to transport mass from one configuration to another, minimizing the cost of the transportation. This field has gained significant attention across various disciplines due to its theoretical richness and a wide range of practical applications. 
 ---
 ## Introduction
 

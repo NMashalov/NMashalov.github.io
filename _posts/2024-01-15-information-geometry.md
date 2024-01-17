@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Stein Variotional Gradient Descent
+title: Information geometry
+describe: Information geometry is wide field. It has wide usage in Quantum Mechanics and Bayessian Inference. I'll make an overview of tools, that can come handy for your studying. 
 ---
 
-https://www.youtube.com/watch?v=elSmfwHNTRc
 
 
 Fisher information metric
@@ -97,3 +97,7 @@ $x_1,\dots, x_n \in M$ metric space:
 $$
     \tilde{x} =\argmin_{x\in M} \frac{1}{n} \sum_{i=1}^n d(x,x_i)^2
 $$
+
+
+
+https://www.youtube.com/watch?v=elSmfwHNTRc
