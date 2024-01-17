@@ -41,6 +41,23 @@ $$
     \int_{x \in \Pi(\mu,\nu)}
 $$
 
+## Fluid approach
+
+It will be instructive to consider another formulation of the optimal transport, originating in spirit
+from the fluid dynamics (Benamou & Brenier, 2000; Villani, 2003). Assume that at t = 0 we are
+given a set of ‘particles’ from the density ρ0 which move in such a way that at t = 1 their state
+is described by the density ρ1. Moreover, these particles move in such that they perform the least
+amount of work. Formally, they minimize the following action:
+
+$$
+    A= \int_{0}^{1} \left(\sum_{x} |\dot{x}(t)|^2\right)dt
+$$
+
+In continuous limit obtaining:
+
+$$
+    \inf_{\rho,v} \left\{\int_{0}^1 \int \rho_t(x) |v_t(x)|^2 dxdt; \frac{\partial \rho_t}{\partial t} + \nabla \dot (\rho_t v_t) =0\right\}
+$$
 
 ## Resources
 Computational Optimal Transport by Marco Cuturi
