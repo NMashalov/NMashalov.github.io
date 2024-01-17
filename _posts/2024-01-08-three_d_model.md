@@ -1,35 +1,14 @@
 ---
-layout: post
-title: Current advances in generative 3d modeling
-description: Diffusion nets were great success with image generation. I'll make current  This overview will help you to formS
+layout: distill
+title: 3d Generative modeling
+description: >
+ Diffusion nets were great success with image generation. I'll make current  This overview will help you to formS
 authors:
     - name: Mashalov Nikita
       - affiliations:
         - name: MIPT
 ---
 
-<d-contents>
-
-  <nav class="l-text figcaption">
-  <h3>Contents</h3>
-    <div><a href="#introduction"> Introduction </a></div>
-    <div><a href="#the-score-function-score-based-models-and-score-matching">The score function, score-based models, and score matching</a></div>
-    <div><a href="#langevin-dynamics">Langevin dynamics</a></div>
-    <div><a href="#naive-score-based-generative-modeling-and-its-pitfalls">Naive score-based generative modeling and its pitfalls</a></div>
-    <div><a href="#score-based-generative-modeling-with-multiple-noise-perturbations">Score-based generative modeling with multiple noise perturbations</a></div>
-    <div><a href="#score-based-generative-modeling-with-stochastic-differential-equations-sdes">Score-based generative modeling with stochastic differential equations (SDEs)</a>			</div>
-    <ul>
-      <li><a href="#perturbing-data-with-an-sde">Perturbing data with an SDE</a></li>
-      <li><a href="#reversing-the-sde-for-sample-generation">Reversing the SDE for sample generation</a></li>
-      <li><a href="#estimating-the-reverse-sde-with-score-based-models-and-score-matching">Estimating the reverse SDE with score-based models and score matching</a></li>
-      <li><a href="#how-to-solve-the-reverse-sde"> How to solve the reverse SDE </a></li>
-      <li><a href="#probability-flow-ode">Probability flow ODE</a></li>
-      <li><a href="#controllable-generation-for-inverse-problem-solving">Controllable generation for inverse problem solving</a></li>
-    </ul>
-    <div><a href="#connection-to-diffusion-models-and-others">Connection to diffusion models and others</a></div>
-    <div><a href="#concluding-remarks">Concluding remarks</a></div>      
-  </nav>
-</d-contents>
 
 Here's my overview of current achievements in 3D 
 
