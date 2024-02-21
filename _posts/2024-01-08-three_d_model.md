@@ -1,13 +1,21 @@
 ---
 layout: distill
 title: 3d Generative modeling
-description: >
- Diffusion nets were great success with image generation. I'll make current  This overview will help you to formS
+date: 2021-05-05 11:12:00-0400  
+description: Diffusion nets were great success with image generation. I'll make current  This overview will help you to formS
 authors:
     - name: Mashalov Nikita
-      - affiliations:
-        - name: MIPT
+    affiliations:
+        name: MIPT
 ---
+
+<d-contents>
+
+  <nav class="l-text figcaption">
+  <h3>Contents</h3>
+    <div><a href="### Two main approaches"> Two main approaches </a></div>  
+  </nav>
+</d-contents>
 
 
 Here's my overview of current achievements in 3D 
