@@ -16,19 +16,34 @@ Commonly used technique for that is introducing role model for specialists with.
 
 ## Airflow team
 
-| ![team.jpg](/assets/img/posts/airflow_automation/team.png) | 
+| ![team.jpg](/assets/img/posts/airflow_automation/team.excalidraw.png) | 
 |:--:| 
-| *Our team* |
+| *Our dream team* |
 
-## Analytic 
+## Data Scientist
+
+
 
 Analytic concentrates on novel ideas for models and bring/
+
+
+| ![team.jpg](/assets/img/posts/airflow_automation/roles/engineer.excalidraw.png) | 
+|:--:| 
+| *Provider of novel ideas * |
+
+
+H
 
 
 ## Engineer 
 
 
 Engineer is mostly reponsible 
+
+
+| ![team.jpg](/assets/img/posts/airflow_automation/roles/engineer.excalidraw.png) | 
+|:--:| 
+| *Scales and rescales * |
 
 Prerequisites:
 - proficient with bash
@@ -39,6 +54,11 @@ Although he helps to relaxate climax situation. He helps analytic and discuss te
 
 ## Developer
 
+Mostly responsible for scalability, therefore ease of building new dags and their monitoring.
+
+| ![team.jpg](/assets/img/posts/airflow_automation/roles/developer.excalidraw.png) | 
+|:--:| 
+| *Scales and rescales * |
 
 Every specialist is essential and has an ability to master his skills.
 

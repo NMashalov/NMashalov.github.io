@@ -1,18 +1,61 @@
 ---
 layout: post
 title: Airflow Part 1 Architecture
-description: Article covers core architecture for beginner ml team.
+description: Article covers core architecture for beginner ml team. 
+tags: Airflow, s3
 ---
 
 Through my previous year I had intensive work as MLOps specialist. One of my task was to facilitate in-house Airflow provision. I'll share some techniques, that I implemented during my work.
 
+Cycle will consists of three parts:
+1. (Current) Linkage between tools of versioning and storage. Airflow 
+
+
 ## Airflow
 
 
-Apache Airflow is an open-source platform designed to programmatically author, schedule, and monitor workflows. It allows users to define complex workflows as Directed Acyclic Graphs (DAGs), where each node in the graph represents a task, and the edges define the dependencies between tasks. Airflow provides a rich set of features, including a web-based user interface for DAG management, integration with various data sources and processing engines, and robust scheduling capabilities. Users can easily create, schedule, and monitor workflows using Python scripts, leveraging a vast ecosystem of pre-built operators for common tasks such as executing SQL queries, transferring files, or running Python functions. Airflow's extensible architecture allows for the integration of custom operators and hooks, enabling seamless orchestration of workflows across different systems. With its emphasis on flexibility, scalability, and reliability, Apache Airflow has become a popular choice for orchestrating data pipelines, ETL processes, machine learning workflows, and more in a wide range of industries and use cases.
+Apache Airflow is an open-source platform designed to programmatically author, schedule, and monitor workflows.
+
+Basic primitive is a Directed Acyclic Graphs (DAGs)
+
+
 
 
 ## Setup
+
+That means that all DevOps work of the deployment, configuration, and monitoring of Airflow instances. Provider ensured scalability, reliability, and performance.
+
+Yet it comes with restriction of  Airflow environments, manage dependencies, which could be mitigated with building custom airflow docker image.
+
+## Deployment 
+
+Before we can start inference we need to deliver our files to production. Our provides can grab files for inference from s3. 
+
+
+## Pipeline 
+
+Main observation was that dags are mostly similar and has structure of Extract Transform Load(ETL).
+
+Therefore they can be replaced with simple yaml structure as:
+```yaml
+dag: # dag info
+    name: 
+    schedule: " " # simple cron expression
+
+
+```
+
+
+It a
+
+
+### Operators
+
+
+
+
+
+
 
 
 
@@ -93,3 +136,9 @@ Finally
 
 I share my 
 
+
+
+
+## Appendix 
+
+##
