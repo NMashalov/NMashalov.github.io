@@ -9,18 +9,17 @@ Optimal transport is useful beyond classical problems of logistic and resource m
 
 Optimal transport is useful tool for data scientist. I'll bring case from my personal practice to prove.
 
-## Bussiness case. Matching scripts
+## Business case. Matching scripts
 
 Suppose we have call-center, where junior operators read scripts and more proficient colleagues speak freestyle. We want to match phrases from scripts to new original variations of freestylers. 
 
 Modern neural nets models BERT provides us with convenient of vector representation of sentences.
 
-We actually have two distibutions of sentences. First is for scipt sentences, second for 
-
+We actually have two distributions of sentences. First is for script sentences, second for 
 
 You can read more about embeddings [here](https://www.turing.com/kb/guide-on-word-embeddings-in-nlp).
 
-In normal practise we use cosine similarity
+In normal practice we use cosine similarity
 
 $$
     \text{similarity} = \cos(\text{emb}_1,\text{emb}_2)
@@ -41,6 +40,23 @@ $$
     \int_{x \in \Pi(\mu,\nu)}
 $$
 
+## Population dynamics
+
+JKO flows:
+
+
+JKO flows also were studied by  Petr Mokrov et.al [Large-Scale Wasserstein Gradient Flows](https://arxiv.org/abs/2106.00736).
+
+I met 
+[Optimal Transport Modeling of Population Dynamics: Applications in Single-Cell by Charlotte Bunne](https://www.youtube.com/watch?v=XODDkScHIVc)  and their excelent ariticle 
+
+
+Approach was elaborated in article https://arxiv.org/abs/2210.06662
+
+
+
+
+
 ## Fluid approach
 
 It will be instructive to consider another formulation of the optimal transport, originating in spirit
@@ -58,6 +74,8 @@ In continuous limit obtaining:
 $$
     \inf_{\rho,v} \left\{\int_{0}^1 \int \rho_t(x) |v_t(x)|^2 dxdt; \frac{\partial \rho_t}{\partial t} + \nabla \dot (\rho_t v_t) =0\right\}
 $$
+
+where the infimum is taken over all time-dependent probability densities
 
 ## Resources
 Computational Optimal Transport by Marco Cuturi

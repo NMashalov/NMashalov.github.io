@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Information geometry
-describe: Information geometry is wide field. It has wide usage in Quantum Mechanics and Bayessian Inference. I'll make an overview of tools, that can come handy for your studying. 
+describe: Information Geometry is a mathematical framework that studies the geometric structures associated with statistical models and probability distributions. It has wide usage in Quantum Mechanics and Bayesian Inference. I'll make an overview of tools, that can come handy for your studying. 
 ---
 
-
+## Introduction 
 
 Fisher information metric
 
@@ -18,6 +18,8 @@ Fisher information
 $$
     I(\theta) = \mathbb{E}_\theta[s_\theta(X)s_\theta(X)^T], s_\theta = \nabla_\theta \log f_\theta(X)
 $$
+
+## Riemannian manifold
 
 Fisher information is symmetric positive semi-definite. Defines Riemannian metric on the parameter space(RAO, 1945) - Fisher information metric:
 
@@ -89,7 +91,7 @@ $$
     x - y \rightarrow \log_x(y)
 $$
 
-## Frechet mean
+## Freshett mea
 
 $x_1,\dots, x_n \in M$ metric space:
 

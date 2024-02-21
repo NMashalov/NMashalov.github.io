@@ -27,11 +27,6 @@ Formats can be transformed
 
 
 
-
-
-
-
-
 ## 3d representation
 
 As pictures have several approaches like SVG and PNG 3d models also have different representation.

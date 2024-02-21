@@ -60,3 +60,6 @@ grouped_dag = [sorted(generation) for generation in nx.topological_generations(d
 
  Utilization of the "Don't Repeat Yourself" (DRY) principle helped me a lot with learning benefits of abstractions, decomposing and code refactoring. You can see my progress in developing In my project multi-component projects here: https://github.com/NMashalov/PydanticGraph.
 In PydanticGraph i worked a lot with validation framework Pydantic. That brought me intuition of working with developer abstractions and python inner libraries like importlib.  
+
+SDEdit:
+Image synthesis and editing with stochastic differential equations. a

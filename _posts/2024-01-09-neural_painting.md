@@ -89,7 +89,7 @@ Start from scetch infilling
 
 Dataset
 
-| ![drawing.jpg](/assets/img/posts/drawing/Simo-Serra/drawing.png) | 
+| ![drawing.jpg](/assets/img/posts/nerual_drawing/Simo-Serra/drawing.png) | 
 |:--:| 
 | *Sketch Simplification* |
 

@@ -3,6 +3,9 @@ layout: post
 title: Diffusion net notes
 ---
 
+## Connection to stochastic equations
+
+https://arxiv.org/abs/2108.01073
 
 ## Normal distribution. Information geometry approach
 
@@ -62,6 +65,8 @@ Is approach for dimension reduction similar as PCA and t-SNE. You can read [more
 
 
 ## Connection to optimal transport
+
+Yandex research paper 
 
 Two steps:
 1. Transforming ODE to probability flow ODE
