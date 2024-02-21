@@ -1,11 +1,15 @@
 ---
 layout: post
 title: Neural Painting
+description: Neural painting refers to a creative technique that uses neural networks, particularly generative models like deep neural networks (DNNs) or generative adversarial networks (GANs), to generate images or artwork based on input from users or predefined styles. This process involves training a neural network on a large dataset of images to learn the characteristics of different artistic styles or content. Users can then interactively guide the generation process by providing input, such as sketches, text descriptions, or reference images, to influence the output. Neural painting allows for the creation of diverse and aesthetically pleasing images, often blurring the lines between human and machine creativity.
 ---
 
-Types:
-- inpainting
-- stroke-based
+
+Neural Painting is research direction which is particular helpful for ease of artist and animators. It was primarly used in anime production.
+
+Basicaly there are two types of neural painting:
+- inpainting. type of image restoration method that leverages neural networks to fill in missing or damaged parts of images.  
+- stroke-based aim to enhance the creative process by providing intelligent suggestions or guidance to artists, allowing them to generate strokes more efficiently and with greater artistic control.
 
 ## Style2Paints
 
@@ -20,7 +24,14 @@ Despite v4 version used classical methods, v5 now use stable diffusion for color
 https://ttwong12.github.io/papers/toontrack/toontrack.html
 
 
+https://potrace.sourceforge.net/
+
+<img src="https://potrace.sourceforge.net/img/head-orig3.png" 
+alt="Cheetah!" />
+
 ## Sceletionization
+
+Is a technique from morphology to extraction low dimensional curve embedded in observed space.
 
 https://lllyasviel.github.io/DanbooRegion/paper/paper.pdf
 ```python
