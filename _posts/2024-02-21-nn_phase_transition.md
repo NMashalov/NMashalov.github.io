@@ -4,9 +4,10 @@ title: Phase transition in neural nets
 description: Article starts from energy based approaches and comes to phase transition
 tags: Airflow, s3
 authors:
-    - name: Mashalov Nikita
-      - affiliations:
-        - name: MIPT
+  - name: Mashalov Nikita  
+    affiliations: 
+      name: MIPT
+hidden: false
 ---
 
 # Free energy
