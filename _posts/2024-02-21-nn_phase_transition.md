@@ -13,6 +13,10 @@ hidden: false
 # Free energy
 
 
+
+
+
+
 ## Energy based approach 
 
 Energy based defines probability as
@@ -28,6 +32,25 @@ Best papers in field comes from Yann LeCun
 
 Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture [paper](https://arxiv.org/abs/2301.08243)
 
+
+## Symmetry
+
+Симметрия может быть разной размерности. Для описания преобразования поворота в nD нужно n-1 параметров минимум. Если задавать в виде матрицы, то в n раз больше. Внутри сетки это преобразование выучивается в виде какой-то своей структуры, которая может быть ещё больше. Therfore for we need more neurons
+
+
+For rotation in nD dimension we at least need n-1 parameters.
+
+| ![chemistry.png](/assets/img/posts/phase_transition/architecture/model.excalidraw.png) |
+|:--:|
+| *No we can't handle. We need one more neuron* |
+
+
+
+Size of neural ensamble
+
+
+
+
 ## Analitic solution of attention 
 
 A phase transition between positional and semantic learning in a solvable model of dot-product attention
@@ -41,9 +64,17 @@ Article advices solution of problem and shows phase transition
 
 ## Ising model
 
-
-
 # Renormalization
+
+
+But it might be more intuitive from view of chemistry. Suppose we perfectly know everything about molecule. Every angle and atom of it's structure
+
+| ![chemistry.png](/assets/img/posts/phase_transition/architecture/model.excalidraw.png) |
+|:--:|
+| *But what will be if we put them all together* |
+
+
+
 
 ## Landau theory of phase transition
 

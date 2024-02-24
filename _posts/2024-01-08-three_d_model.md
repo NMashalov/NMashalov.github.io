@@ -19,31 +19,75 @@ authors:
 
 Here's my overview of current achievements in 3D 
 
+Representation is a way of how model of object stored. It is similar to data structures, so it defines speed of .
+Majority of work is done for translation of one representation to another. 
+
+There are a lot. All formatps are designed for optimal case of usage
+
+Clasical 
+- Signed distance function
+- Point of cloud
+- Meshes
+Neural
+- NERF
+- Gaussian splatiing
 
 
-Formats can be transformed 
 
-## Two main approaches
+*Rendering* - process of 
+
+## Classical
+
+### Points of clouds
+
+Often comes from lidar observation.
+
+| ![Lidar.jpg](/assets/img/posts/three_d_dmodels/classical/point_of_clouds/base.excalidraw.png) |
+|:-----: |
+|*Lidar*|  
 
 
-| Flavor    | Distillation from 2d images           | Work with 3d models |
-| --------- | ------------------------------------- | ------------------- |
-| Data| Cheap | Expensive |
-| Speed | currently slow | fast|
-| Influential works| [Profilic Dreamer](https://arxiv.org/pdf/2305.16213.pdf)|[PointE](https://arxiv.org/abs/2212.08751)
+Basically it emits lights and then collects. Through time of response can be estimated relative position to source
 
 
+| ![Lidar.jpg](/assets/img/posts/three_d_dmodels/neural_field.png) |
+|:-----: |
+|*Lidar*|
 
-## 3d representation
+### Mesh
+
+Textured
+mesh [45] represents the geometry of a 3D object with triangle meshes and the texture with color on
+the mesh surface. Here the 3D parameter θ consists of the parameters to represent the coordinates of
+triangle meshes and parameters of the texture. The rendering process g(θ, c) given camera pose c is
+defined by casting rays from pixels and computing the intersections between rays and mesh surfaces
+to obtain the color of each pixel. The textured mesh allows high-resolution and fast rendering with
+differentiable rasterization.
+
+
+Meshes that can be textured.
+
+Textures often represented in sphere
+
+
+## Neural representation
 
 As pictures have several approaches like SVG and PNG 3d models also have different representation.
 
-- NERF
+### NERF
+
+Neural radience field.
 
 Given the camera position $\mathbf{o}$ and
 direction $\mathbf{d}$, a batch of rays $\mathbf{r}(k) = o + k\mathbf{d}$ is sampled to
 render a pixel. The MLP takes $r(k)$ as input and predicts
 the density $τ$ and color $c$.
+
+
+| ![NERF.jpg](/assets/img/posts/three_d_dmodels/neural_field.png) |
+|:-----: |
+|*NERF*|  
+
 
 Final rendered color is given by quadrature:
 
@@ -61,33 +105,15 @@ $$
 $\delta$ - is distance between adjacent samples.
 
 
-- Textured Mesh
 
-Textured
-mesh [45] represents the geometry of a 3D object with triangle meshes and the texture with color on
-the mesh surface. Here the 3D parameter θ consists of the parameters to represent the coordinates of
-triangle meshes and parameters of the texture. The rendering process g(θ, c) given camera pose c is
-defined by casting rays from pixels and computing the intersections between rays and mesh surfaces
-to obtain the color of each pixel. The textured mesh allows high-resolution and fast rendering with
-differentiable rasterization.
-
-
-Current 
-
-## Rendering
-
-https://pytorch3d.org/
-
-
-Most crucial equation comes. It's defined through density estimation
-
-## NERF
 Awesome overview of NERF are presented in [AI SUMMER](https://theaisummer.com/nerf/)
 
 
-| ![NERF.jpg](/assets/img/posts/three_d_dmodels/neural_field.png) |
-| :-------------------------------------------------------------: |
-|                             *NERF*                              |
+
+## NERF
+
+
+                           |
 
 
 
@@ -139,6 +165,20 @@ by distilling pretrained diffusion models,
 
 As
 Advice using
+
+
+
+Formats can be transformed 
+
+## Two main approaches
+
+
+| Flavor    | Distillation from 2d images           | Work with 3d models |
+| --------- | ------------------------------------- | ------------------- |
+| Data| Cheap | Expensive |
+| Speed | currently slow | fast|
+| Influential works| [Profilic Dreamer](https://arxiv.org/pdf/2305.16213.pdf)|[PointE](https://arxiv.org/abs/2212.08751)
+
 
 ## Resourses 
 
