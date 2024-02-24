@@ -40,14 +40,14 @@ Self-Supervised Learning from Images with a Joint-Embedding Predictive Architect
 
 For rotation in nD dimension we at least need n-1 parameters.
 
-| ![chemistry.png](/assets/img/posts/phase_transition/architecture/model.excalidraw.png) |
+
+| ![high_dim_symmetry.png](/assets/img/posts/phase_transition/architecture/model.excalidraw.png) |
 |:--:|
 | *No we can't handle. We need one more neuron* |
 
 
 
 Size of neural ensamble
-
 
 
 
