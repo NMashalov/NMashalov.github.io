@@ -14,7 +14,7 @@ Key physical ideas:
 - search is performed via image cooling, building storage is done via reversed process
 - sampling techniques can be studied from perspective of school physics thermal process like adiabatic, isothermal and more
 
-Many ideas in top papers can be derived from school physics, which are hard to be seen due to obfuscation of terminology 😔 
+Many ideas in top papers can be derived from school physics, which are hard to be seen due to obfuscation of terminology 😔. Hope that will help you in your research and experiments.
 
 ## Introduction
 
@@ -43,12 +43,11 @@ Distribution is called Boltzman and explains probability of particle. You may ar
 
 See, exponent in probability perfectly matches with idea in hierarchy on every level number of files should grow, therefore we will observe. 
 
-## Key physics insights
+## Terminology
 
-I have prepared some beautiful pictures for you to guide through main concepts of temperature, free energy and gaussian noise.
+In section we will refer to physics terminology, which may seem more familiar as their corresponds to nature. I have prepared some beautiful pictures for you to guide through main concepts of temperature, free energy and gaussian noise.
 
 ### Temperature
-
 
 Temperature gives average energy of particle in system by simple equation
 
