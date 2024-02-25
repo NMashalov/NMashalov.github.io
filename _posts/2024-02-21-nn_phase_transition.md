@@ -33,15 +33,25 @@ Best papers in field comes from Yann LeCun
 Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture [paper](https://arxiv.org/abs/2301.08243)
 
 
+## Weights temperature
+
+
+
+| ![high_dim_symmetry.png](/assets/img/posts/phase_transition/weights.excalidraw.png) |
+|:--:|
+| *No we can't handle. We need one more neuron* |
+
+
 ## Symmetry
 
-Симметрия может быть разной размерности. Для описания преобразования поворота в nD нужно n-1 параметров минимум. Если задавать в виде матрицы, то в n раз больше. Внутри сетки это преобразование выучивается в виде какой-то своей структуры, которая может быть ещё больше. Therfore for we need more neurons
+Symmetry holds
+
 
 
 For rotation in nD dimension we at least need n-1 parameters.
 
 
-| ![high_dim_symmetry.png](/assets/img/posts/phase_transition/architecture/model.excalidraw.png) |
+| ![high_dim_symmetry.png](/assets/img/posts/phase_transition/model.excalidraw.png) |
 |:--:|
 | *No we can't handle. We need one more neuron* |
 
@@ -51,20 +61,24 @@ Size of neural ensamble
 
 
 
-## Analitic solution of attention 
-
-A phase transition between positional and semantic learning in a solvable model of dot-product attention
-https://arxiv.org/abs/2402.03902
 
 
-Article advices solution of problem and shows phase transition
-
+## Landau theory 
 
 
 
 ## Ising model
 
-# Renormalization
+### Critical points
+
+Tightly connected with critical exponents, which are defined as
+
+$$
+
+$$
+
+
+### Renormalization
 
 
 But it might be more intuitive from view of chemistry. Suppose we perfectly know everything about molecule. Every angle and atom of it's structure
@@ -95,14 +109,38 @@ $$
 
 
 
+## Perturbation theory
+
+
+
 ## Simple example
 
 Brought from awesome video [Renormalization: The Art of Erasing Infinity](https://www.youtube.com/watch?v=0OQ7BhlfAJY&t=872s)
 
 
+Let's solve:
+
+$$
+  \varepsilon x^2 + 2 x + 1 = 0
+$$
 
 
-## Perturbation theory
+
+Usin
+
+
+
+
+## Machine learning hungers for phase transitions
+
+
+### Analitic solution of attention 
+
+A phase transition between positional and semantic learning in a solvable model of dot-product attention
+https://arxiv.org/abs/2402.03902
+
+
+Article advices solution of problem and shows phase transition
 
 
 ## Futher read

@@ -15,25 +15,62 @@ Biological networks are much more than just scalar weights. It has activation ti
 
 ## Latent representation
 
-Is a model of perpception. Idea is that we repsent every event as manifold
+Represents world events in his own latent space. In easiest case it is just a representation of place 
 
-
-more convenient 
-
-
-| ![pipeline.jpg](/assets/img/posts/airflow_automation/pitch/pipe.excalidraw.png) |
+| ![map.jpg](/assets/img/posts/latent.excalidraw.png) |
 |:--:|
 | ** |
 
+You can learn more about manifold in [blog](https://nmashalov.github.io/blog/2024/manifold/).
 
+Hypothesis of latent representation is well studied and summarized via biological perspective in excellent videos of Artem Kirsanov [Neural manifolds - The Geometry of Behaviour](https://www.youtube.com/watch?v=QHj9uVmwA_0) and [Your brain is moving along the surface of the torus 🤯](https://www.youtube.com/watch?v=9ujnZcaqf-4).
 
+Latent representation are unique among all people. Yet we are capable to share via *communication*, which have certain formats. Through perspective of machine learning that is called [Sparse coding](https://en.wikipedia.org/wiki/Sparse_dictionary_learning). That idea is very similar to basis in linear algebra.
 
-From perspective of analytic mechanics it means that we coresponds to first integral.
+| ![map.jpg](/assets/img/posts/neuroscience/dictionary.excalidraw.png) |
+|:--:|
+| *Communication has lot's of forms* |
+
+From experience of communication we learn to correspond specific communication as certain combination of semantic recognition.
+
+### One more insight. Motion integrals
+
+ When you sit in a train, you don't check to , you *just remember it*.
+
+| ![map.jpg](/assets/img/posts/neuroscience/dictionary.excalidraw.png) |
+|:--:|
+| *Communication has lot's of forms* |
+
+From perspective of analytic mechanics it means that we coresponds to first integral. That means in your semantic space you can *decouple* preserving and changing.
+
+ Moreover, we can say that through years we learn to do that with many things. We learn them an. That helps to concentrate on reall
 
 ## Ensembles
 
 Combinatorial representation of system as possible collections of states
 
+Why we need lot's neuronms
+
+Symmetry can exhibit various dimensions. Describing a rotation transformation in n-dimensional space requires a minimum of n-1 parameters. If represented as a matrix, the parameter space expands by a factor of n. Within a grid, this transformation is learned as a distinctive structure, which may further augment its complexity.
+
+| ![pipeline.jpg](/assets/img/posts/neuroscience/high_dim_symmetry.excalidraw.png) |
+|:--:|
+| *Example of high dimensional symmetry that embedded in 2 dimensional picture* |
+
+Look at following picture. One of the symmetry that net might learn is that all cars, therefore they can be permuted without loss of sense.
+
+$$
+ P = \begin{pmatrix}
+0 & 0 & \cdots & 1 & \cdots & 0 \\
+0 & 0 & \cdots & 0 & \cdots & 1 \\
+\vdots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+1 & 0 & \cdots & 0 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+0 & 1 & \cdots & 0 & \cdots & 0
+\end{pmatrix}
+$$
+
+For learning such symmetries we high dimensional matrix, hence more neurons
 
 ## Neural coding
 
