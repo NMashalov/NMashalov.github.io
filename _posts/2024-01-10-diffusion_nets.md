@@ -195,14 +195,16 @@ Following scores builds shortest path from one point to another on manifold. Yet
 Recall train loss of diffusion net:
 
 $$
-    \sum_{t=2}^T KL(q(x_{t-1}|x_t,x_0) \| p_\theta(x_{t-1}|x_t))
+    \sum_{t=1}^T KL(q(x_{t-1}|x_t,x_0) \| p_\theta(x_{t-1}|x_t))
 $$
 
-It is hard to ascertain what that loss 
+It is hard to ascertain what that loss means. Let's build intuition with placing book in library. When you walk you need to find a department, than case, shelter and finally a place. For that case we will have T=4 and each term corresponds for task of searching.
 
 | ![catalog.png](/assets/img/posts/diffusion_nets/catalog.excalidraw.png) |
 |:--:|
 | *Diffusion does it on every hierarchy level* |
+
+Note that 
 
 Note that every process is decomposed. You can train on any task to be better in whole. This decomposition idea, was introduced in simpler loss
 
