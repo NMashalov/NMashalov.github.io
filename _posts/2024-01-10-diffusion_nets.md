@@ -90,7 +90,7 @@ $$
 $$
 That's it gaussian noise is hierarchical properties as it seamlessly accumulate information from is ancestors.
 
-| ![map.jpg](/assets/img/posts/diffusion_nets/noise_hierarchy.excalidraw.png) |
+| ![cycle.jpg](/assets/img/posts/diffusion_nets/noise_hierarchy.excalidraw.png) |
 |:--:|
 | *Even noise can build hierarchy* |
 
@@ -116,9 +116,9 @@ See $\beta$ in diffusion is reverse temperature $\frac{1}{T}$ and we'll built in
 
 I argue that this process is actually a thermal cycle
 
-| ![map.jpg](/assets/img/posts/diffusion_nets/carnot_cycle.excalidraw.png) |
+| ![map.jpg](/assets/img/posts/diffusion_nets/thermal_cycle.excalidraw.png) |
 |:--:|
-| *Markov chains is just a Carnot cycle. Can you estimate if energy conversion efficiency $\eta$ :)? * |
+| *Kolmogorow writes describes thermal process. Can you estimate if energy conversion efficiency $\eta$ :)? * |
 
 But how it's possible? I mean GPU heats when train. Yeah refrigiator of cooler does it too 🤯. But then he transverse heat to atmosphere, so it can grab heat again. It's called reverse carnot cycle
 
@@ -148,46 +148,70 @@ That's it by minimization of score you build perfect catalogue and your diffusio
 
 | ![map.png](/assets/img/posts/diffusion_nets/map.excalidraw.png) |
 |:--:|
-| *Distribution hierarchy* |
+| *Map shows direction on where step further from all point* |
 
 So that diffusion can effectively catalog all info from pictures. Every step is recataloging info in best format possible. Actually it means that net builds *geodesics* on manifold.
 
-| ![catalog.png](/assets/img/posts/diffusion_nets/catalog.excalidraw.png) |
-|:--:|
-| *Diffusion does it on every hierarchy level* |
 
 ### How net understand direction?
 
 For understanding let's write small distortion of distribution in energy using Taylor series :
 
 $$
-    q(E + \Delta E) = q(E) + \nabla q(E) dx
+    q(E + \Delta E) = q(E) + \nabla_E q(E) \Delta E 
 $$
 
-For energy based 
+For energy based gradient can be derived as
+
 $$
-    p(x) = \frac{exp(-\frac{x}{T})}{Z} \\
-    \nabla_x p = 1/T exp(-x/T)
+    p(E) = \frac{exp(-\frac{E}{T})}{Z} \\
+    \nabla_E p = - \frac{exp(-\frac{E}{T})}{Z \cdot T} \\
 $$
 
 
-\nabla q(x)
-Taylor extension is possible due to fact that we want continious storage
+So that relation between probabilities of distorted and undistorted energy levels is given by:
 
-Direction is built from gradient. $\nabla_x \ln q_x $
+$$
+    \frac{q(E+\Delta E)}{q(E)} = 1 - \Delta E /T
+$$
 
-Geodesics are shortest path from one point to another on manifold
-
-But how this happens?
-
-
-Actually a lot of concepts is incapsulated in this formula.
+Note that relation between levels doesn't depend on current energy! Hierarchy order depends only on temperature. This property is important is at it brings continuous symmetry of translation in corresponding algebra.
 
 
+
+Direction is built from gradient of  $\nabla_x \ln q_x$, which in literature is noted as *score*.
+
+Following scores builds shortest path from one point to another on manifold. Yet geodesic may not always desirable. 
+
+Recall train loss of diffusion net:
+
+$$
+    \sum_{t=2}^T KL(q(x_{t-1}|x_t,x_0) \| p_\theta(x_{t-1}|x_t))
+$$
+
+It is hard to ascertain what that loss 
+
+| ![catalog.png](/assets/img/posts/diffusion_nets/catalog.excalidraw.png) |
+|:--:|
+| *Diffusion does it on every hierarchy level* |
+
+Note that every process is decomposed. You can train on any task to be better in whole. This decomposition idea, was introduced in simpler loss
+
+$$
+    \mathrm{E}_{t,\epsilon_t\sim N(0,1), x_0}\left[\|\epsilon_t - \epsilon_\theta (\sqrt{\bar{\alpha}} x_0 + \sqrt{1-\bar{\alpha}}\epsilon_t)\|^2\right]
+$$
+
+Don't be messed with brackets.  $\sqrt{\bar{\alpha}} x_0 + \sqrt{1-\bar{\alpha}}\epsilon_t$  is an argument of $\epsilon_\theta$, which to corresponds to neural net prediction. 
+
+Notice that "simple" equation is overcomplicated with discrete timestamps. Physics perspective doesn't restrict special spaces.
+
+### You can model sampling techniques as thermal process
+
+Euler sampling is isothermal as it brings equal portions of heat on each step.
 
 ### Why we need neural nets?
 
-Because their are very good at learning *symmetries* in images. That helps them build optimal catalogues
+Because their are very good at learning *continuous symmetries*. Therefore they are great in interpolating and task of 
 
 You can learn about symmetries from my other blog.
 
