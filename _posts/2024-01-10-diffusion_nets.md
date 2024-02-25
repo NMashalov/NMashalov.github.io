@@ -40,9 +40,6 @@ I have prepared some beautiful pictures for you to guide through main concepts o
 ### Temperature
 
 
-
-
-
 Temperature gives average energy of particle in system by simple equation
 
 $$
@@ -50,22 +47,11 @@ $$
 $$
 ,where $d$ is a dimension of space and $T$ is temperature.
 
+Cold is training pictures, hot is initial gaussian. Let's see how temperature varies distribution
 
-Cold is training pictures, hot is initial gaussian. Let's see how bolt
-
-
-
-
-You can derive it from integration if you want
-
-| ![map.jpg](/assets/img/posts/diffusion_nets/gpu-fridge.excalidraw.png) |
+| ![map.jpg](/assets/img/posts/diffusion_nets/boltzman.gif) |
 |:--:|
-| *GPU is kinda of cooler* |
-
-
-
-Now i need you full attention.
-
+| *High temperature corresponds allows more states* |
 
 ### Free energy
 
@@ -126,7 +112,9 @@ $$
     {\displaystyle x_{t}={\sqrt {1-\beta _{t}}}x_{t-1}+{\sqrt {\beta _{t}}}z_{t}}
 $$
 
-I argue that this process is actually a Carnot cycle
+See $\beta$ in diffusion is reverse temperature $\frac{1}{T}$ and we'll built intuition why it is useful 
+
+I argue that this process is actually a thermal cycle
 
 | ![map.jpg](/assets/img/posts/diffusion_nets/carnot_cycle.excalidraw.png) |
 |:--:|
@@ -146,6 +134,8 @@ So, what is actually happening, through forward process is a heating of images t
 |:--:|
 | *Distribution hierarchy* |
 
+What's more temperature naturally sets scale of
+
 ### How that happens?
 
 It happens through local minimization of local free energy on manifold. Free energy is a metric of best cataloging of whole manifold, score function is it's local gradient. 
@@ -156,34 +146,80 @@ $$
 
 That's it by minimization of score you build perfect catalogue and your diffusion net know have map. That means that recataloging is done locally. Starting from shelfs
 
-| ![distribtuion.jpg](/assets/img/posts/diffusion_nets/map.excalidraw.png) |
+| ![map.png](/assets/img/posts/diffusion_nets/map.excalidraw.png) |
 |:--:|
 | *Distribution hierarchy* |
 
 So that diffusion can effectively catalog all info from pictures. Every step is recataloging info in best format possible. Actually it means that net builds *geodesics* on manifold.
 
-| ![distribtuion.jpg](/assets/img/posts/diffusion_nets/catalog.excalidraw.png) |
+| ![catalog.png](/assets/img/posts/diffusion_nets/catalog.excalidraw.png) |
 |:--:|
 | *Diffusion does it on every hierarchy level* |
 
+### How net understand direction?
+
+For understanding let's write small distortion of distribution in energy using Taylor series :
+
+$$
+    q(E + \Delta E) = q(E) + \nabla q(E) dx
+$$
+
+For energy based 
+$$
+    p(x) = \frac{exp(-\frac{x}{T})}{Z} \\
+    \nabla_x p = 1/T exp(-x/T)
+$$
+
+
+\nabla q(x)
+Taylor extension is possible due to fact that we want continious storage
+
+Direction is built from gradient. $\nabla_x \ln q_x $
+
 Geodesics are shortest path from one point to another on manifold
+
+But how this happens?
+
+
+Actually a lot of concepts is incapsulated in this formula.
+
+
 
 ### Why we need neural nets?
 
 Because their are very good at learning *symmetries* in images. That helps them build optimal catalogues
 
+You can learn about symmetries from my other blog.
 
-
-
-Yeah, main advantage of diffusion net, that it is has very seamless.
-
-
+Tightly connected wit
 
 ## But why it needs noise?
 
 Because we use stochastic process of cooling
 
+
+## Conclusions
+
+I'll provide you key bullets
+
+- training set is cold 🥶, original noise is very hot 🥵
+- diffusion iteratively cools 🧊 source noise
+- it trains to do that via heating 🔥
+- you can use school physics to study diffusion
+
+See, you can even build optimal diffusion through Carno cycle.
+
+| ![carno.png](/assets/img/posts/diffusion_nets/carnot.excalidraw.png) |
+|:--:|
+| *Optimal cycle for cooling and heating* |
+
+It's very interesting, if it is possible to measure 
+
+
+
 ## Related themes
+
+Here some themes that are tightly related, but I am still strugling to wrench them to article
 
 
 ### Fokker-Plank equation
@@ -193,50 +229,18 @@ $$
     \frac{\partial}{\partial t} p(x,t) = - \frac{\partial}{\partial x}[\mu(x,t)p(x,t)] + \partial{}{}
 $$
 
-
 ### Quantum perspective
 
 Energy level are actually discrete, but are expanded through brownian motion of particles.
 
 ## Normal distribution. Information geometry approach
 
-
 It can be shown that riemanian metric of gaussian distribution is equal to:
 $$
     g = \frac{1}{\sigma^2}(d\mu^2+2d\sigma^2)
 $$
 
-That speculations is very important due to fact it's curvature defines hyperbolic space.
-
-Hyperbolic space is naturally hierarchical
-
-## Physics way of thinking of Langevin dynamics
-
-Recall, Langevin gradient descent is brought by 
-
-$$
-    x_{t+1} = x_t + \eta
-$$
-
-Diffusion process are stochastic in local, but not one global scale. You can rule diffusion by simple temperature difference. 
-
-
-
-But why add noise?
-
-A smarter way for representation is to ask why exactly gaussian noise? 
-
-## Central limit theorem
-
-It's well known fact:
-
-
-But why really that happens behind fuss of formulas? What is actual speed of convergence? And what's more important what is so special about normal distribution? 
-
-I'll provide you with intuition for answering this questions.
-
-
-tions 
+That speculations is very important due to fact it's curvature defines hyperbolic space as them naturally hierarchical
 
 ### Diffusion maps
 
