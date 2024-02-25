@@ -8,6 +8,16 @@ authors:
       name: MIPT
 ---
 
+Key physical ideas:
+
+- diffusion models are continuous storages that use heat equations for search in high-dimensional space
+- search is performed via image cooling, building storage is done via reversed process
+- sampling techniques can be studied from perspective of school physics thermal process like adiabatic, isothermal and more
+
+Many ideas in top papers can be derived from school physics, which are hard to be seen due to obfuscation of terminology 😔 
+
+## Introduction
+
 File systems are organized hierachicallly. It helps to preserve *context* and *hasten* search
 
 | ![map.jpg](/assets/img/posts/diffusion_nets/file_storage.excalidraw.png) |
@@ -16,7 +26,7 @@ File systems are organized hierachicallly. It helps to preserve *context* and *h
 
 But happens if wants to do *continuate* hierarchy. How it will look like, what properties will it have?
 
-## Physics womb E
+### Physics matter
 
 In computer science methods using energy are called *energy-based* and are mostly popularized via Yann LeCun.
 
@@ -211,16 +221,9 @@ Euler sampling is isothermal as it brings equal portions of heat on each step.
 
 ### Why we need neural nets?
 
-Because their are very good at learning *continuous symmetries*. Therefore they are great in interpolating and task of 
+Because their are very good at learning *continuous symmetries*. Therefore they are great in interpolating, which is great property for 
 
 You can learn about symmetries from my other blog.
-
-Tightly connected wit
-
-## But why it needs noise?
-
-Because we use stochastic process of cooling
-
 
 ## Conclusions
 
