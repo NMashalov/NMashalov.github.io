@@ -3,7 +3,24 @@ layout: post
 title: Practical applications of optimal transport
 description: Optimal transport, also known as Monge-Kantorovich transport or Wasserstein distance, is a mathematical framework that deals with the optimal way to transport mass from one configuration to another, minimizing the cost of the transportation. This field has gained significant attention across various disciplines due to its theoretical richness and a wide range of practical applications. 
 ---
+
+---
+
+Optimal transport, also known as Monge-Kantorovich transport or Wasserstein distance, is a mathematical framework that deals with the optimal way to transport mass from one configuration to another, minimizing the cost of the transportation. This field has gained significant attention across various disciplines due to its theoretical richness and a wide range of practical applications. 
+
+---
+
+Best provider:
+https://abdulfatir.com/blog/2020/Gradient-Flows/
+
+
+$\textbf{c}$-transform. Concave functions
+
+
+
 ## Introduction
+
+
 
 Optimal transport is useful beyond classical problems of logistic and resource management. That method is somehow universal. I describe from my personal experience in NLP.
 

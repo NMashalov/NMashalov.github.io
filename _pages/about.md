@@ -16,7 +16,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-**Code:** My main language is Python. I gained great experience by planning and completing ad-hoc task for my diploma and  building production infrastructures for ML models from scratch.
+**Code:** My main language is Python. I gained great experience by planning and completing ad-hoc task for my diploma and  building production infrastructures for ML models from scratch. Сheck out my libraries for s
 
 **Research:** Currently I focus on elucidating abstract math formulas beyond deep learning. I write about them in my [blog](https://nmashalov.github.io/blog/) and papers.
 

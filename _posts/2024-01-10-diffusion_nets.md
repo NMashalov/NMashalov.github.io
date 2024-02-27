@@ -6,6 +6,7 @@ authors:
   - name: Mashalov Nikita  
     affiliations: 
       name: MIPT
+tags: diffusion nets
 ---
 
 Key physical ideas:
@@ -14,7 +15,7 @@ Key physical ideas:
 - search is performed via image cooling, building storage is done via reversed process
 - sampling techniques can be studied from perspective of school physics thermal process like adiabatic, isothermal and more
 
-Many ideas in top papers can be derived from school physics, which are hard to be seen due to obfuscation of terminology 😔. Hope that will help you in your research and experiments.
+Many ideas in top papers can be derived from school physics, which are hard to be seen due to complex terminology 😔. Hope that will help you in your research and experiments.
 
 ## Introduction
 
@@ -244,18 +245,56 @@ See, you can even build optimal diffusion through Carno cycle.
 It's very interesting, if it is possible to measure 
 
 
+##
+
+
+
+
+
 
 ## Related themes
 
 Here some themes that are tightly related, but I am still strugling to wrench them to article
 
 
-### Fokker-Plank equation
-
+### Fokker-Plank equation through flux
 
 $$
-    \frac{\partial}{\partial t} p(x,t) = - \frac{\partial}{\partial x}[\mu(x,t)p(x,t)] + \partial{}{}
+    \frac{\partial}{\partial t} p(x,t) = - \frac{\partial}{\partial x}[\mu(x,t)p(x,t)] + \frac{\partial^2 p(x,t)}{\partial x^2}
 $$
+
+Corresponding diffusion shift can rewriten $\mu(x,t)= \mu(x)$ can be reduced to potential of gradient $V(x)$.
+
+Rearranging derivatives in right side brings noition of flux
+
+$$
+    \frac{\partial}{\partial x}\left[\frac{\partial V(x)}{\partial x} p(x)+ \frac{\partial{p(x)}}{\partial x}\right] = \frac{\partial}{\partial x} J(x)
+$$
+
+Through sampling in Langevin dynamics we bring flux through diffusion term. Recall
+
+$$
+    dX_t = \underbrace{-\nabla V(X) dt}_{\text{drift term}} +\underbrace{\sqrt{2} dB_t}_{\text{diffusion term}}
+$$
+
+Stationary distribution with $\frac{\partial p(x,t)}{\partial t} = 0$ brings:
+
+$$
+    \frac{\partial p(x,t)}{\partial t} = \frac{\partial J(x)}{\partial x} = 0
+$$
+
+Which can rewritten as:
+
+$$
+    \
+$$
+
+Solution is formed in:
+$$
+     p(x) \sim exp(-V(x))
+$$
+
+Note that stationary distirbution in thermal system is hierarchical.
 
 ### Quantum perspective
 
