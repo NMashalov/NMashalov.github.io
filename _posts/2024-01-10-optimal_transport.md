@@ -9,6 +9,10 @@ Optimal transport is useful beyond classical problems of logistic and resource m
 
 Optimal transport is useful tool for data scientist. I'll bring case from my personal practice to prove.
 
+## Attacks
+
+Adversarial attacks are a perfect subject of research as their allow to understand properties of models to depth, even providing solutions in closed form.
+
 ## Business case. Matching scripts
 
 Suppose we have call-center, where junior operators read scripts and more proficient colleagues speak freestyle. We want to match phrases from scripts to new original variations of freestylers. 
